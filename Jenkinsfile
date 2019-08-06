@@ -1,6 +1,6 @@
 node{
 	stage('SCM Checkout'){
-		git branch: 'wartomcat', url: 'https://github.com/Beenpd1/devopsprojects.git'
+		git branch: 'wartomcat', url: 'https://github.com/Beenod1/devopsprojects.git'
 	}
 	stage('Compile-Package'){
 		def mvnHome = tool name: 'maven', type: 'maven'
