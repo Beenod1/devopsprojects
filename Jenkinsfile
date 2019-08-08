@@ -1,6 +1,6 @@
 node{
 	stage('SCM Checkout'){
-		git branch: 'smtpjenkins', url: 'https://github.com/prabhatpankaj/devopsprojects.git'
+		git branch: 'smtpjenkins', url: 'https://github.com/Beenod1/devopsprojects.git'
 	}
 	stage('Compile-Package'){
 		def mvnHome = tool name: 'maven', type: 'maven'
@@ -15,7 +15,7 @@ node{
 	slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#jenkinslab', color: '#439FE0', message: 'New Build deployed', teamDomain: 'intelycore8', tokenCredentialId: 'slack-secret'
 	}
 	stage('Email Notification'){
-	mail bcc: '', body: 'This is body', cc: '', from: 'prabhatiitbhu@gmail.com', replyTo: 'prabhatiitbhu@gmail.com', subject: 'This is Subject', to: 'prabhat@aptence.com'
+	mail bcc: '', body: 'This is body', cc: '', from: 'binod.maharjan.nepal@gmail.com', replyTo: 'binod.maharjan.nepal@gmail.com', subject: 'This is Subject', to: 'binod.maharjan.nepal@gmail.com'
 	}
 
 }
